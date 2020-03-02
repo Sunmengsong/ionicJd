@@ -1,0 +1,16 @@
+<div class="recomand">
+  <p>为你推荐</p>
+  <div>
+    <span class="recomandPro" *ngFor="let item of data.recomand">
+      <img src="{{ item.pic }}" alt="" />
+      <p>{{ item.title | slice: 0:20 }}...</p>
+      <div class="recomandPric">
+        <div>
+          <span class="price">{{ item.price | currency: "¥" }}</span>
+          <span class="active" *ngIf="item.active">{{ item.active }}</span>
+        </div>
+        <span class="btn">找相似</span>
+      </div>
+    </span>
+  </div>
+</div>

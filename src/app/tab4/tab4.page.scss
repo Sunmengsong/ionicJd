@@ -1,0 +1,30 @@
+ion-card {
+  padding: 20px 0;
+  padding-bottom: 10px;
+  box-shadow: 0;
+}
+ion-card > ion-item + ion-item {
+  margin-top: 10px;
+}
+
+.order {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.order .line {
+  display: inline-block;
+  width: 30%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.order .txt {
+  color: rgba(0, 0, 0, 0.4);
+  vertical-align: middle;
+  margin: 0 10px;
+  font-size: 70%;
+}
+
+.loginReg ion-label {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}

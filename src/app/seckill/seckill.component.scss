@@ -1,0 +1,48 @@
+.killBorder {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Kill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.secKill {
+  display: block;
+}
+.secKill span {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  margin-right: 5px;
+  color: #e43130;
+}
+
+.killPro {
+  display: box;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.killPro::-webkit-scrollbar {
+  display: none;
+}
+.killPro span {
+  display: inline-block;
+  width: 23%;
+  padding: 10px;
+  text-align: center;
+}
+p {
+  margin: 0;
+}
+.discount {
+  font-size: 16px;
+  color: red;
+}
+.price {
+  font-size: 14px;
+}

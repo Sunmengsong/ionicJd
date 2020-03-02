@@ -1,0 +1,22 @@
+<div class="killBorder">
+  <div class="Kill">
+    <span>
+      距离<span style="color: #e43130;">明天14:00场</span> 秒杀活动:
+    </span>
+    <span class="secKill">
+      <span>{{ int_hours }}</span
+      >: <span>{{ int_minutes }}</span
+      >:
+      <span>{{ int_seconds }}</span>
+    </span>
+  </div>
+  <div class="killPro">
+    <span *ngFor="let item of data.seckill">
+      <img src="{{ item.pic }}" />
+      <p class="discount">{{ item.discountPrice | currency: "¥" }}</p>
+      <p class="price">
+        <s>{{ item.price | currency: "¥" }}</s>
+      </p>
+    </span>
+  </div>
+</div>

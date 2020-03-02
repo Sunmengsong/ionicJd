@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-icon name="menu-outline"></ion-icon>
+      <ion-searchbar color="light" placeholder="搜索商品名"></ion-searchbar>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides pager #s1>
+          <ion-slide *ngFor="let item of data.carouselItem">
+            <img src="{{item.pic}}" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="icons">
+      <ion-col>
+        <ion-slides>
+          <ion-slide>
+            <span *ngFor="let item of data.icons;let i = index">
+              <img *ngIf="i < 5" src="{{item.pic}}" />
+              <div *ngIf="i < 5" style="font-size: 14px;">{{item.title}}</div>
+            </span>
+          </ion-slide>
+
+          <ion-slide>
+            <span *ngFor="let item of data.icons;let i = index">
+              <img *ngIf="i >= 5" src="{{item.pic}}" />
+              <div *ngIf="i >= 5" style="font-size: 14px;">{{item.title}}</div>
+            </span>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <app-seckill></app-seckill>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col> </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <app-recomand [data]="recomandData"></app-recomand>
+  </ion-list>
+
+  <ion-infinite-scroll
+    threshold="40px"
+    position="bottom"
+    (ionInfinite)="loadData($event)"
+  >
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="努力加载中..."
+    >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
